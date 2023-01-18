@@ -33,8 +33,7 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
         <div sec:authorize="isAuthenticated()">
             <a th:href="@{/login}">Login</a>
-        </div> |
-
+        </div>
         <div sec:authorize="isAuthenticated()" class="mx-3">
             <a th:href="@{/account/accounts}" class="mr-2">Account</a>|
             <a href="javascript: document.logoutForm.submit()">Logout</a>

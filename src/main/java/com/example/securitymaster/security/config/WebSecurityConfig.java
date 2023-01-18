@@ -65,11 +65,11 @@ public class WebSecurityConfig {
         http.
                 authorizeRequests()
                 .expressionHandler(expressionHandler())
-                .requestMatchers("/","/home","/bootstrap/**")
+                .requestMatchers("/","/home","/bootstrap/**","/error/**")
                 .permitAll()
-                .requestMatchers("/customer/**").hasRole(CUSTOMERS_PAGE_VIEW)
+/*                .requestMatchers("/customer/**").hasRole(CUSTOMERS_PAGE_VIEW)
                 .requestMatchers("/employee/**").hasRole(EMPLOYEES_PAGE_VIEW)
-                .requestMatchers("/department/**").hasRole(DEPARTMENTS_PAGE_VIEW)
+                .requestMatchers("/department/**").hasRole(DEPARTMENTS_PAGE_VIEW)*/
                 .anyRequest()
                 .authenticated()
                 .and()

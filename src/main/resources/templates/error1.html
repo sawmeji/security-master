@@ -8,12 +8,11 @@
       <div class="col">
 
         <div class="alert alert-danger" role="alert">
-          <!--<h3 th:text="|${httpStatus} - ${httpStatus.reasonPhrase}|"></h3>-->
-          <h4 th:text="${errorMessage}"></h4>
-
+          <h3 th:text="${exception}"></h3>
+          <h3 th:text="|${errorMessage} - ${httpStatus}|"></h3>
           <a th:href="@{/home}" class="btn btn-dark btn-lg">GO Home</a>
+        </div>
 
-      </div>
      <!-- <div class="col py-5"
       th:with="httpStatus=${T(org.springframework.http.HttpStatus).valueOf(#response.status)}"
       ></div>-->
