@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/masterLayout :: layout(~{::main})}" lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<main role="main">
+  <div class="container mt-5">
+    <div class="row d-flex justify-content-center align-content-center">
+      <div class="col-md-5">
+        <div th:if="${loginError}">
+          <div class="alert alert-danger" role="alert">
+            <h3>Invalid Username & Password!</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Login Form</h3>
+          </div>
+          <div class="card-body">
+            <form th:action="@{/login}" method="post" class="border" >
+              <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Enter Username...">
+              </div>
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="text" name="password" id="password" class="form-control" placeholder="Enter Password...">
+              </div>
+              <input type="submit" value="Login" class="btn btn-dark btn-block btn-lg">
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
